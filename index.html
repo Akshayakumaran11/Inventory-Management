@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📦 Inventory Management System</h1>
+
+    <!-- Add / Update Form -->
+    <form id="inventoryForm">
+      <input type="hidden" id="itemId">
+
+      <label>Product Name:</label>
+      <input type="text" id="productName" placeholder="Enter product name" required />
+
+      <label>SKU:</label>
+      <input type="text" id="sku" placeholder="Stock Keeping Unit" required />
+
+      <label>Category:</label>
+      <input type="text" id="category" placeholder="Category" required />
+
+      <label>Quantity:</label>
+      <input type="number" id="quantity" min="0" placeholder="Quantity" required />
+
+      <label>Supplier:</label>
+      <input type="text" id="supplier" placeholder="Supplier name" required />
+
+      <label>Price (₹):</label>
+      <input type="number" id="price" step="0.01" placeholder="Price per item" required />
+
+      <label>Location:</label>
+      <input type="text" id="location" placeholder="Warehouse location" required />
+
+      <button type="submit" id="addBtn">Add Item</button>
+      <button type="button" id="updateBtn" style="display:none;">Update Item</button>
+    </form>
+
+    <hr>
+
+    <!-- Table Display -->
+    <h2>📋 Current Inventory</h2>
+    <table id="inventoryTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Product</th>
+          <th>SKU</th>
+          <th>Category</th>
+          <th>Qty</th>
+          <th>Supplier</th>
+          <th>Price (₹)</th>
+          <th>Location</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
